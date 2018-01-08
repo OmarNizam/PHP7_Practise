@@ -12,19 +12,27 @@
 
   class AppleDevice
   {
-// properties
-  public $ram = '1GB';
-  public $inch = '4 Inch';
-  public $space = '16GB';
-  public $color = 'Silver';
+  // properties
+    public $ram = '1GB';
+    public $inch = '4 Inch';
+    public $space = '16GB';
+    public $color = 'Silver';
+  // Methods
 
+    public function doubleHomePressed()
+    {
+      echo "You have pressed the home button twice";
+    }
   }
+
+
 // iphone6plus Object
   $iphone6plus = new AppleDevice();
   $iphone6plus->ram = '2GB';
   $iphone6plus->inch = '5 Inch';
   $iphone6plus->space = '32GB';
   $iphone6plus->color = 'Gold';
+  $iphone6plus->doubleHomePressed();   // calling the class method on the object
   echo '<pre>';
     var_dump($iphone6plus);
   echo '</pre>';
