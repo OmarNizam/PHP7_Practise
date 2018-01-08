@@ -18,6 +18,8 @@
     public $space = '16GB';
     public $color = 'Silver';
     public $ownerName;
+  // Constants
+    const OWNERNAME = 3;
   // Methods
 
     public function doubleHomePressed()
@@ -33,8 +35,8 @@
 
     public function setOwnerName()
     {
-      if (strlen($this->ownerName) < 3) {
-        echo "Owner Name Canot Be Less Than 3 Chars !!!";
+      if (strlen($this->ownerName) < self::OWNERNAME ) {   // self is the class but we use it with class Constants  || But $this we use it with class properties
+        echo "Owner Name Canot Be Less Than " . self::OWNERNAME . " Chars !!!";
       } else {
         echo "Yor name has been set";
       }
@@ -56,6 +58,7 @@
     var_dump($iphone6plus);
   echo '</pre>';
 
+echo AppleDevice::OWNERNAME;   // call constant out of the class
 
   $iphone7plus = new AppleDevice();
   $iphone7plus->ram = '4GB';
