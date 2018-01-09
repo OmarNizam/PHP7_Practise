@@ -17,10 +17,11 @@
     public $inch = '4 Inch';
     public $space = '16GB';
     public $color = 'Silver';
+    private $lock;
     // public $ownerName;
 
   // Constants
-    const OWNERNAME = 3;
+    //const OWNERNAME = 3;
 
   // Methods
 
@@ -52,12 +53,18 @@
       $this->color = $co;
     }
 
+    public function changeLock($lo)
+    {
+      $this->lock = sha1($lo);
+    }
+
   }
 
 
 // iphone6plus Object
   $iphone6plus = new AppleDevice();
   $iphone6plus->changeSpac('2GB', '5 Inch', '32GB', 'Gold');
+  $iphone6plus->changeLock('12345');
   // $iphone6plus->inch = '5 Inch';
   // $iphone6plus->space = '32GB';
   // $iphone6plus->color = 'Gold';
