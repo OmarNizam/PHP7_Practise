@@ -21,7 +21,7 @@
       $this->color = $co;
     }
 
-    public function sayHello($n)
+    final public function sayHello($n)    //can't override final method anywhere
     {
       $this->name = $n;
       echo "Welcom to " . $n;
@@ -36,11 +36,12 @@
     public $camera = '25MB';
 
 // Methods
-  public function sayHello($n)
-  {
-    $this->name = $n;
-    echo "Welcom to " . $n . ' this phone has ' . $this->ram . ' Ram.';
-  }
+  // public function sayHello($n)
+  // {
+  //   $this->name = $n;
+  //   echo "Welcom " . $n;
+  //   // echo "Welcom to " . $n . ' this phone has ' . $this->ram . ' Ram.';
+  // }
 
   }
 
