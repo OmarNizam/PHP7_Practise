@@ -3,6 +3,7 @@
 
 
   class AppleDevice    // super class | perant class
+                      // if i use final class means i can't inherit from it
   {
   // properties
     public $ram = '1GB';
